@@ -16,6 +16,21 @@ export class AppComponent {
     this.artists = artistService.getArtists();
   }
 
+  onClick(e) {
+    this.name = e.target.innerHTML;
+  }
+
+  addArtist(value) {
+    if (value !== '') {
+      this.artists.push({
+        name: value,
+        shortname: '',
+        reknown: 'Hard Knocks',
+        bio: ''
+      });
+    }
+  }
+
 }
 
 

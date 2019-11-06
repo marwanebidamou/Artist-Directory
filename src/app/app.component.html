@@ -3,10 +3,16 @@
   <label class="search-label">search
     <span *ngIf="name"> for: {{name}}</span>
   </label>
+  <input type="text" class="search-input" #newArtist
+  (keyup.enter)="addArtist(newArtist.value); newArtist.value = '';" >
+  <button class="btn" (click)="addArtist(newArtist.value); newArtist.value = '';">
+    Add
+  </button>
 </div>
 
 <ul class="artistlist cf">
   <li class="artistlist-item cf"
+      (click)="onClick($event)"
       *ngFor="let artist of artists">
     <h2 class="artist-name">{{ artist.name }}</h2>
     <h3 class="artist-reknown">{{ artist.reknown }}</h3>
