@@ -16,6 +16,10 @@ export class AppComponent {
     this.artists = artistService.getArtists();
   }
 
+  showArtist(artist: Artist) {
+    this.currentArtist = artist;
+  }
+
 }
 
 
