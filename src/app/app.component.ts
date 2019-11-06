@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Artist} from './models/artist';
+import {ArtistService} from './services/artist.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +10,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'artistDirectory';
   name = 'Marwane';
+  artists: Artist[];
+
+  constructor(private artistService: ArtistService) {
+    this.artists = artistService.getArtists();
+  }
+
 }
+
+
