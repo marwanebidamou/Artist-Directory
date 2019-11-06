@@ -1,0 +1,39 @@
+/* ------------------ */
+/* Artist List Styles */
+/* ------------------ */
+
+.artistlist {
+  position: absolute;
+  width: 100%;
+  min-width:320px;
+  max-width: 400px;
+  left: 0;
+  right: 0;
+  margin-bottom: 30px;
+  background: white;
+  box-shadow: 0 1px 0 rgba(0,0,0,.25);
+  z-index: 10;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.artistlist-item {
+  padding: 10px 10px 0 10px;
+  border-bottom: 1px solid #999;
+  opacity: .9;
+  transition: all 0.3s ease-out;
+}
+
+.artistlist-item:hover {
+  cursor: pointer;
+  background: #FDF6E3;
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.artistlist-item:last-child  {
+  border-bottom:none;
+}

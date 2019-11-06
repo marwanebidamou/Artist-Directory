@@ -8,27 +8,12 @@ import {ArtistService} from './services/artist.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'artistDirectory';
-  name = 'Marwane';
   artists: Artist[];
+  currentArtist: Artist;
+  query: string;
 
   constructor(private artistService: ArtistService) {
     this.artists = artistService.getArtists();
-  }
-
-  onClick(e) {
-    this.name = e.target.innerHTML;
-  }
-
-  addArtist(value) {
-    if (value !== '') {
-      this.artists.push({
-        name: value,
-        shortname: '',
-        reknown: 'Hard Knocks',
-        bio: ''
-      });
-    }
   }
 
 }
